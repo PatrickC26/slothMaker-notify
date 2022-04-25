@@ -45,7 +45,7 @@
   
 
   <script>
-    let redirectURL ="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=anD105dcUiIYHbUY6WEvHx&redirect_uri=https://patrickc26.github.io/slothMaker-notify/root/c.html&scope=notify&state=nostate";
+    let redirectURL ="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=anD105dcUiIYHbUY6WEvHx&redirect_uri=https://patrickc26.github.io/slothMaker-notify/root/index.html&scope=notify&state=nostate";
     
     class values {
         static reloading = true
@@ -58,7 +58,7 @@
     
     if (notify_code != "" && notify_code != null){
         document.getElementById('cle').innerHTML = 'Account Checked correct. Please enter your name.';
-        document.getElementById('clc').innerHTML = '帳戶已確認，請出入您的姓名';
+        document.getElementById('clc').innerHTML = '帳戶已確認，請輸入您的姓名';
         window.alert("請出入您的姓名");
     }
     else{
