@@ -62,11 +62,12 @@
         window.alert("請出入您的姓名");
     }
     else{
+        document.getElementById('button').disabled = true;
         document.getElementById('cle').innerHTML = 'Account add failure. Please try again.';
         document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
         document.getElementById('err').innerHTML = 'URI error';
         window.alert("登錄失敗，請重新登錄\nURI error");
-<!--        window.location.href = redirectURL;-->
+        window.location.href = redirectURL;
     }
       
       
@@ -129,7 +130,7 @@
             document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
             document.getElementById('err').innerHTML = 'data GET request error, err code : ' + response.status;
             window.alert("登錄失敗，請重新登錄\nerr code : GET - " + response.status);
-<!--            window.location.href = redirectURL;-->
+            window.location.href = redirectURL;
         }
            
         return "";
@@ -158,7 +159,7 @@
                     document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
                     document.getElementById('err').innerHTML = 'data PUT request error, err code : ' + response.status;
                     window.alert("登錄失敗，請重新登錄\nerr code : PUT - " + response.status);
-<!--                    window.location.href = redirectURL;-->
+                    window.location.href = redirectURL;
                     time = 9;
                 }
             });
