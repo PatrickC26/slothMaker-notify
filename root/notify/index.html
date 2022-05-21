@@ -19,14 +19,14 @@
               </label>
           </h2>
           
-<!--          <form>-->
-<!--              Please enter your name 請輸入姓名：<input class="editor" id "T_name" type="text" name="name">-->
-<!--          </form>-->
+          <form>
+              Please enter your name 請輸入姓名：<input class="editor" id "T_name" type="text" name="name">
+          </form>
           
           <br>
-<!--          <form>-->
-<!--              <button type="button" name="button" id="button" onclick="load();" >確定</button>-->
-<!--          </form>-->
+          <form>
+              <button type="button" name="button" id="button" onclick="load();" >確定</button>
+          </form>
           
           
           <br>
@@ -45,7 +45,8 @@
   
 
   <script>
-    let redirectURL ="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=anD105dcUiIYHbUY6WEvHx&redirect_uri=https://patrickc26.github.io/sloth-Maker-notify/root/index.html&scope=notify&state=nostate";
+    let redirectURL ="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=anD105dcUiIYHbUY6WEvHx&redirect_uri=https://patrickc26.github.io/slothMaker-notify/root/notify/index.html&scope=notify&state=nostate";
+    
     class values {
         static reloading = true
     }
@@ -57,15 +58,16 @@
     
     if (notify_code != "" && notify_code != null){
         document.getElementById('cle').innerHTML = 'Account Checked correct. Please enter your name.';
-        document.getElementById('clc').innerHTML = '帳戶已確認，請出入您的姓名';
+        document.getElementById('clc').innerHTML = '帳戶已確認，請輸入您的姓名';
         window.alert("請出入您的姓名");
     }
     else{
+        document.getElementById('button').disabled = true;
         document.getElementById('cle').innerHTML = 'Account add failure. Please try again.';
         document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
         document.getElementById('err').innerHTML = 'URI error';
         window.alert("登錄失敗，請重新登錄\nURI error");
-<!--        window.location.href = redirectURL;-->
+        window.location.href = redirectURL;
     }
       
       
@@ -128,7 +130,7 @@
             document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
             document.getElementById('err').innerHTML = 'data GET request error, err code : ' + response.status;
             window.alert("登錄失敗，請重新登錄\nerr code : GET - " + response.status);
-<!--            window.location.href = redirectURL;-->
+            window.location.href = redirectURL;
         }
            
         return "";
@@ -157,7 +159,7 @@
                     document.getElementById('clc').innerHTML = '帳戶登錄失敗，請再試一次';
                     document.getElementById('err').innerHTML = 'data PUT request error, err code : ' + response.status;
                     window.alert("登錄失敗，請重新登錄\nerr code : PUT - " + response.status);
-<!--                    window.location.href = redirectURL;-->
+                    window.location.href = redirectURL;
                     time = 9;
                 }
             });
