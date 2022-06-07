@@ -8,6 +8,10 @@
   </head>
   <body>
       <center>
+          <h1>
+              樹懶創客內部系統 sloth maker internal system
+          </h1>
+          
           <h2>
               <label id = "cle">
                   Checking....
@@ -39,6 +43,13 @@
               </label>
           </h4>
           
+          <br>
+          
+          
+          <h5>
+              © 樹懶創客 sloth maker 2022
+          </h5>
+          <img src="https://patrickc26.github.io/slothMaker-notify/root/ftp/logo/color_500.png" alt="Sloth Maker" style="width:50px;height:50px;">
           
           
       </center>
@@ -58,7 +69,7 @@
     console.log(notify_code);
     
     if (notify_code != "" && notify_code != null){
-        document.getElementById('cle').innerHTML = 'Account Checked correct. Please enter your name.';
+        document.getElementById('cle').innerHTML = 'Account Checked comfirmed. Please enter your name.';
         document.getElementById('clc').innerHTML = '帳戶已確認，請輸入您的姓名';
         window.alert("請出入您的姓名");
     }
@@ -91,7 +102,7 @@
                     firebasePUT("staff/new/now", nowin.toString());
                     firebasePUT("staff/new/" + nowin.toString(), notify_code + "," + innerS);
                     
-                    document.getElementById('cle').innerHTML = 'Account All Checked correct. Please wait for futher notice.';
+                    document.getElementById('cle').innerHTML = 'Account All Checked comfirmed. Please wait for futher notice.';
                     document.getElementById('clc').innerHTML = '帳戶皆已確認，請等待進一步通知';
                     document.getElementById('err').innerHTML = 'This website coulde be closed. 可關閉該網頁。'
                     window.alert("成功登錄");
